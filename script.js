@@ -57,7 +57,7 @@ const button = {
 };
 
 const input = {
-  message: document.querySelector('.send-message__input'),
+  message: document.getElementById('send-message__input'),
   cloud_add_key: document.querySelector('.cloud-storage__input_add-key'),
   cloud_add_value: document.querySelector('.cloud-storage__input_add-value'),
   cloud_remove_key: document.querySelector('.cloud-storage__input_remove'),
