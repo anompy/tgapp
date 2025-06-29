@@ -141,6 +141,19 @@ button.main.addEventListener('click', (e) => {
   }
 });
 
+
+document.getElementById('download-file').addEventListener('click', () => {
+  const url = document.getElementById('download-file-url').value.trim();
+  const name = document.getElementById('download-file-name').value.trim();
+
+  if (!url || !name) return;
+
+  telegram.downloadFile({
+    url: url,
+    file_name: name
+  });
+});
+
 button.back.addEventListener('click', (e) => {
   const modify_button = new ModifyStyle(e.currentTarget);
   if (e.currentTarget.value == 'enable') {
